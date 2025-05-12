@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    document.title = `Krishna Suthar - ${theme === 'dark' ? 'Dark' : 'Light'} Mode`; // Dynamic title based on theme
+    // document.title = `Krishna Suthar - ${theme === 'dark' ? 'Dark' : 'Light'} Mode`; // Dynamic title based on theme
   }, [theme]);
 
   useEffect(() => {
