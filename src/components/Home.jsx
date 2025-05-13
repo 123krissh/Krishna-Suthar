@@ -8,6 +8,7 @@ import { FaReact, FaHtml5, FaJava, FaCss3Alt } from "react-icons/fa";
 import { DiPython, DiJavascript1 } from 'react-icons/di';
 import { FaNode } from "react-icons/fa6";
 import { SiMysql } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
 import me from '../assets/Me.jpg';
 import ComputersCanvas from './canvas/Computers';
 
@@ -107,7 +108,7 @@ const Home = () => {
     { name: "Python", icon: <DiPython />, color: "text-blue-700" },
     { name: "Java", icon: <FaJava />, color: "text-blue-400" },
     { name: "JavaScript", icon: <DiJavascript1 />, color: "text-yellow-500" },
-    { name: "Three.js", icon: <Cloud />, color: "text-black-600" },
+    { name: "Three.js", icon: <TbBrandThreejs />, color: "text-white" },
     { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-600" },
     { name: "HTML5", icon: <FaHtml5 />, color: "text-red-500" },
     { name: "Git", icon: <FolderGit2 />, color: "text-orange-500" },
