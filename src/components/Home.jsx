@@ -286,24 +286,25 @@ const Home = () => {
                 </div>
               </div>
               
-              <motion.div 
-                className="mt-8"
-                variants={itemVariants}>
-                <button 
-                  className="px-2 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-md inline-flex items-center">
-                    <Link to="/about">Learn more about my journey</Link>
-                  <ArrowRight size={16} className="ml-2" />
-                </button>
-              </motion.div>
+              <motion.div className="mt-8" variants={itemVariants}>
+        <Link 
+          to="/about"
+          className="px-2 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-md inline-flex items-center"
+        >
+          Learn more about my journey
+          <ArrowRight size={16} className="ml-2" />
+        </Link>
+      </motion.div>
 
-              <motion.div className="mt-4"
-                variants={itemVariants}>
-                 <button 
-                  className="px-2 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-md inline-flex items-center">
-                    <Link to="/project">View My Projects</Link>
-                  <ArrowRight size={16} className="ml-2" />
-                </button>
-              </motion.div>
+      <motion.div className="mt-4" variants={itemVariants}>
+        <Link 
+          to="/projects"
+          className="px-2 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-md inline-flex items-center"
+        >
+          View My Projects
+          <ArrowRight size={16} className="ml-2" />
+        </Link>
+      </motion.div>
             </motion.div>
           </div>
         </div>
@@ -474,13 +475,12 @@ const Home = () => {
   <motion.p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
     I'm always open to discussing new projects, creative ideas & opportunities to be part of your vision.
   </motion.p>
-  <button 
-    className="px-4 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-lg">
-    <Link to="/contact" className="flex items-center">
+  
+    <Link to="/contact" className="px-1 w-40 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-lg">
       Connect Me
       <ArrowRight size={16} className="ml-2" />
     </Link>
-  </button>
+ 
 </motion.div>
 
       </motion.section>
