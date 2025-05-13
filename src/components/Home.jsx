@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-// import * as THREE from 'three';
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { 
   Code, Database, Brain, BarChart, FolderGit2, Cloud, Palette, Briefcase, Lightbulb, Users, BookOpen, BotIcon, ArrowRight
 } from 'lucide-react';
@@ -109,10 +107,10 @@ const Home = () => {
     { name: "Python", icon: <DiPython />, color: "text-blue-700" },
     { name: "Java", icon: <FaJava />, color: "text-blue-400" },
     { name: "JavaScript", icon: <DiJavascript1 />, color: "text-yellow-500" },
+    { name: "Three.js", icon: <Cloud />, color: "text-black-600" },
     { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-600" },
     { name: "HTML5", icon: <FaHtml5 />, color: "text-red-500" },
     { name: "Git", icon: <FolderGit2 />, color: "text-orange-500" },
-    { name: "AWS", icon: <Cloud />, color: "text-yellow-600" },
     { name: "MongoDB", icon: <Database />, color: "text-green-600" },
     { name: "SQL", icon: <SiMysql />, color: "text-yellow-600" },
     { name: "ML", icon: <Brain />, color: "text-purple-500" },
@@ -167,7 +165,7 @@ const Home = () => {
               View My Work
             </Link>
             <Link to="https://drive.google.com/file/d/1bWMTsEQ5V7DtEkOfujoIK1VVg7_17fO-/view?usp=sharing" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
-              My Rasume
+              My Resume
             </Link>
           </motion.div>
         </motion.div>
