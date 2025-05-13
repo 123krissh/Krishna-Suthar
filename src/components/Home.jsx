@@ -165,7 +165,7 @@ const Home = () => {
             <Link to="/projects" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
               View My Work
             </Link>
-            <Link to="https://drive.google.com/file/d/1bWMTsEQ5V7DtEkOfujoIK1VVg7_17fO-/view?usp=sharing" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
+            <Link to="https://drive.google.com/file/d/1bJcva2uI3XP5uPhScH3XWL51GKQ0CuC6/view?usp=sharing" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
               My Resume
             </Link>
           </motion.div>
@@ -456,7 +456,7 @@ const Home = () => {
               to={project.link}
               className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 text-sm font-medium inline-flex items-center mt-auto transition-colors"
             >
-              Read more
+              Google Scholar
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
