@@ -137,25 +137,7 @@ const Contact = ({ theme }) => {
               Let's Talk
             </h2>
 
-            {submitSuccess && (
-              <motion.div
-                className="mb-6 p-4 bg-green-100 dark:bg-green-800/30 text-green-700 dark:text-green-300 rounded-lg"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                Your message has been sent successfully! I'll get back to you soon.
-              </motion.div>
-            )}
-
-            {submitError && (
-              <motion.div
-                className="mb-6 p-4 bg-red-100 dark:bg-red-800/30 text-red-700 dark:text-red-300 rounded-lg"
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                There was an error sending your message. Please try again.
-              </motion.div>
-            )}
+            
 
             <form ref={formRef} onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -167,7 +149,7 @@ const Contact = ({ theme }) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                    className="w-full px-4 py-2 rounded-lg border-2 border-blue-500 dark:border-blue-400 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
                   />
                 </div>
                 <div>
@@ -178,7 +160,7 @@ const Contact = ({ theme }) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                    className="w-full px-4 py-2 rounded-lg border-2 border-blue-500 dark:border-blue-400 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
                   />
                 </div>
               </div>
@@ -191,7 +173,7 @@ const Contact = ({ theme }) => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-blue-500 dark:border-blue-400 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
                 />
               </div>
 
@@ -203,7 +185,7 @@ const Contact = ({ theme }) => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
+                  className="w-full px-4 py-2 rounded-lg border-2 border-blue-500 dark:border-blue-400 text-white backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark"
                 ></textarea>
               </div>
 
@@ -230,6 +212,27 @@ const Contact = ({ theme }) => {
                 )}
               </motion.button>
             </form>
+
+            {submitSuccess && (
+              <motion.div
+                className="mt-4 p-4 bg-green-100 dark:bg-green-800/30 text-green-700 dark:text-green-300 rounded-lg"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                Your message has been sent successfully! I'll get back to you soon.
+              </motion.div>
+            )}
+
+            {submitError && (
+              <motion.div
+                className="mb-6 p-4 bg-red-100 dark:bg-red-800/30 text-red-700 dark:text-red-300 rounded-lg"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                There was an error sending your message. Please try again.
+              </motion.div>
+            )}
+
           </div>
         </motion.div>
       </div>

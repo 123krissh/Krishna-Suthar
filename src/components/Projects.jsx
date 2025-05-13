@@ -80,7 +80,7 @@ const Projects = () => {
     },
     {
       title: "Brain Tumor Detection",
-      description: "Comparative YOLO-based model study (v3-v11) on medical imaging for brain tumor detection.",
+      description: "Conducted a comparative analysis of YOLOv3, YOLOv5, YOLOv8, YOLOv9, YOLOv10, and YOLOv11 object detection models on brain MRI datasets for tumor detection.",
       image: bt,
       technologies: ["YOLO", "Python", "TensorFlow", "PyTorch"],
       category: "dl",

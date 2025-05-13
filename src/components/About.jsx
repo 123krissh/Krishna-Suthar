@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import me from '../assets/Me.jpg';
 import { DiPython, DiJavascript1 } from 'react-icons/di';
-import { FaReact, FaHtml5, FaJava   } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaJava, FaNodeJs   } from 'react-icons/fa';
 import { VscVscode } from "react-icons/vsc";
+import { RiTailwindCssFill } from "react-icons/ri";
 import {
   GraduationCap,
   Briefcase,
@@ -13,14 +14,12 @@ import {
   Code,
   Database,
   GitBranch,
-  Cloud,
-  MonitorSmartphone,
   Globe,
   Figma,
   Brain,
   Bot,
   BarChart,
-  TreeDeciduous, Github, Linkedin, Mail, ArrowRight,
+  Github, Linkedin, Mail, ArrowRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -36,7 +35,7 @@ const About = ({ theme }) => {
       items: [
         { name: "React", icon: <FaReact  className="w-4 h-4 mr-2" /> },
         { name: "Next.js", icon: <Globe className="w-4 h-4 mr-2" /> },
-        { name: "Tailwind CSS", icon: <MonitorSmartphone className="w-4 h-4 mr-2" /> },
+        { name: "Tailwind CSS", icon: <RiTailwindCssFill className="w-4 h-4 mr-2" /> },
         { name: "JavaScript", icon: <DiJavascript1 className="w-4 h-4 mr-2" /> },
         { name: "HTML", icon: <FaHtml5  className="w-4 h-4 mr-2" /> },
       ],
@@ -44,12 +43,10 @@ const About = ({ theme }) => {
     {
       category: "Backend",
       items: [
-        { name: "Node.js", icon: <Server className="w-4 h-4 mr-2" /> },
+        { name: "Node.js", icon: <FaNodeJs  className="w-4 h-4 mr-2" /> },
         { name: "Express", icon: <Code className="w-4 h-4 mr-2" /> },
         { name: "Python", icon: <DiPython  className="w-4 h-4 mr-2" /> },
         { name: "MongoDB", icon: <Database className="w-4 h-4 mr-2" /> },
-        { name: "PostgreSQL", icon: <Database className="w-4 h-4 mr-2" /> },
-        { name: "Firebase", icon: <Cloud className="w-4 h-4 mr-2" /> },
       ],
     },
     {
@@ -59,7 +56,6 @@ const About = ({ theme }) => {
         { name: "Deep Learning", icon: <Brain className="w-4 h-4 mr-2" /> },
         { name: "Artificial Intelligence", icon: <Bot className="w-4 h-4 mr-2" /> },
         { name: "Data Science", icon: <BarChart className="w-4 h-4 mr-2" /> },
-        { name: "Data Structure", icon: <TreeDeciduous className="w-4 h-4 mr-2" /> },
         { name: "Java", icon: <FaJava className="w-4 h-4 mr-2" /> },
       ],
     },
@@ -67,7 +63,6 @@ const About = ({ theme }) => {
       category: "Tools",
       items: [
         { name: "Git", icon: <GitBranch className="w-4 h-4 mr-2" /> },
-        { name: "AWS", icon: <Cloud className="w-4 h-4 mr-2" /> },
         { name: "Figma", icon: <Figma className="w-4 h-4 mr-2" /> },
         { name: "VS Code", icon: <VscVscode className="w-4 h-4 mr-2" /> },
       ],
@@ -251,7 +246,7 @@ const About = ({ theme }) => {
     I'm always open to discussing new projects, creative ideas & opportunities to be part of your vision.
   </motion.p>
   <button 
-    className="px-4 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium transition-all duration-150 hover:text-gray-800 hover:shadow-lg">
+    className="px-4 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium transition-all duration-150 hover:text-gray-900 hover:font-bold hover:shadow-lg">
     <Link to="/contact" className="flex items-center">
       Connect Me
       <ArrowRight size={16} className="ml-2" />
