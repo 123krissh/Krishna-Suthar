@@ -2,14 +2,17 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Code, Database, Brain, BarChart, FolderGit2, Cloud, Palette, Briefcase, Lightbulb, Users, BookOpen, BotIcon, ArrowRight
+  Code, Database, Brain, BarChart, FolderGit2, Cloud, Palette, Briefcase, Lightbulb, Users, BookOpen, BotIcon, ArrowRight,
+  GithubIcon,
+  LinkedinIcon
 } from 'lucide-react';
 import { FaReact, FaHtml5, FaJava, FaCss3Alt } from "react-icons/fa";
 import { DiPython, DiJavascript1 } from 'react-icons/di';
 import { FaNode } from "react-icons/fa6";
-import { SiMysql } from "react-icons/si";
+import { SiLeetcode, SiMysql } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import me from '../assets/Me.jpg';
+import resume from '../assets/KRISHNA SUTHAR RESUME.pdf';
 import ComputersCanvas from './canvas/Computers';
 
 // Skills Carousel Component
@@ -101,6 +104,13 @@ const Home = () => {
     }
   };
 
+  // Social Links
+  const socialLinks = [
+    { icon: <GithubIcon size={20} />, url: 'https://github.com/123krissh' },
+    { icon: <LinkedinIcon size={20} />, url: 'https://www.linkedin.com/in/krishana-suthar/' },
+    { icon: <SiLeetcode size={20} />, url: 'https://leetcode.com/u/Krishna348/' },
+  ];
+
   // Skill data
   const skills = [
     { name: "React.js", icon: <FaReact />, color: "text-blue-500" },
@@ -124,7 +134,7 @@ const Home = () => {
     {
       title: "Cyberbullying Behavior Analysis",
       description: "Analysing Cyberbullying Behavior in Social Media Using Supervised ML Algorithms and NLP",
-      year: "2024",
+      year: "Research Paper — 2024",
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Cf_C804AAAAJ&citation_for_view=Cf_C804AAAAJ:u-x6o8ySG0sC"
     }
   ];
@@ -141,11 +151,16 @@ const Home = () => {
         <motion.div className="flex-1" variants={itemVariants}>
           <span className="inline-block text-sm font-semibold text-blue-400 mb-2 px-3 py-1 rounded-full bg-blue-900/30 backdrop-blur-sm">Welcome to my portfolio</span>
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-4 text-gray-700 dark:text-gray-300">
-            Hello, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Krishna Suthar</span>
+            Hello, I'm{" "}
+            <motion.span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              style={{ backgroundSize: "200% 200%" }}>
+              Krishna Suthar</motion.span>
           </h1>
           
           <motion.p 
-            className="text-xl md:text-2xl mb-4 text-gray-600 dark:text-blue-400"
+            className="text-xl md:text-2xl mb-4 text-gray-600 dark:text-purple-300"
             variants={itemVariants}
           >
             Software Developer & Data Scientist
@@ -155,7 +170,7 @@ const Home = () => {
             className="mb-8 max-w-lg text-gray-700 dark:text-gray-100"
             variants={itemVariants}
           >
-            I transform complex ideas into elegant, user-friendly applications. Specializing in <span className="text-blue-400">full-stack development</span> with a focus on <span className='text-blue-400'>AI integration</span> and <span className='text-blue-400'>data visualization</span>.
+            I transform complex ideas into elegant, user-friendly applications. Specializing in <span className="text-blue-400">full-stack development</span> with a focus on <span className='text-purple-400'>AI integration</span> and <span className='text-cyan-400'>data visualization</span>.
           </motion.p>
           
           <motion.div 
@@ -165,14 +180,42 @@ const Home = () => {
             <Link to="/projects" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
               View My Work
             </Link>
-            <Link to="https://drive.google.com/file/d/1bJcva2uI3XP5uPhScH3XWL51GKQ0CuC6/view?usp=sharing" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
+            <a href={resume} download className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white dark:text-white rounded-lg font-semibold transition-all duration-150 hover:text-gray-800 hover:shadow-blue-500 shadow-lg">
               My Resume
-            </Link>
+            </a>
           </motion.div>
+
+          {/* Social Icons */}
+          <motion.div
+            className="flex flex-wrap lg:justify-start gap-4 mt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+          >
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-all duration-300 text-xl p-2 rounded-lg hover:bg-blue-400/5 border border-transparent hover:border-blue-400/20"
+                aria-label={`Follow on ${social.name || "social"}`}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 + index * 0.1 }}
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </motion.div>
+
         </motion.div>
         
+       {/* 3D Canvas */}
        <motion.div 
-            className="w-full md:w-1/2 h-[350px] sm:h-[400px] md:h-[500px] flex justify-center items-center"
+            className="mt-[-30px] w-full md:w-1/2 h-[350px] sm:h-[400px] md:h-[500px] flex justify-center items-center"
             variants={itemVariants}
            // whileHover={{ scale: 1.05 }}
         >
@@ -335,11 +378,11 @@ const Home = () => {
             <SkillsCarousel skills={skills} />
           </div>
 
-          <motion.div variants={itemVariants} className="backdrop-blur-sm border border-blue-900 p-5 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-gray-200">Professional Development</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <motion.div variants={itemVariants} className="backdrop-blur-sm border border-blue-900 p-4 rounded-2xl shadow-lg">
+            <h3 className="text-xl text-center font-bold mb-6 text-gray-800 dark:text-gray-200">Professional Development</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex gap-4 items-start">
-                <span className="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-500">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-500">
                   <Code size={20} />
                 </span>
                 <div>
@@ -348,7 +391,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-500">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-500">
                   <Lightbulb size={20} />
                 </span>
                 <div>
@@ -357,7 +400,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-500">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-500">
                   <Users size={20} />
                 </span>
                 <div>
@@ -366,7 +409,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex gap-4 items-start">
-                <span className="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center text-red-500">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center text-red-500">
                   <Palette size={20} />
                 </span>
                 <div>
@@ -448,7 +491,7 @@ const Home = () => {
         <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-1">
           {project.title}
         </h3>
-        <span className="text-sm text-gray-500 dark:text-gray-300 mb-4 block">Research — {project.year}</span>
+        <span className="text-sm text-gray-500 dark:text-gray-300 mb-4 block">{project.year}</span>
         <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
           {project.description}
         </p>

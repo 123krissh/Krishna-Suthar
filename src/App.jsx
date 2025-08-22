@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+// import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -44,7 +44,6 @@ const App = () => {
 
   return (
     <Router>
-      <ScrollToTop />
       <div className="min-h-screen flex flex-col relative bg-white dark:bg-gray-900 transition-colors duration-300">
         <ParticlesBackground theme={theme} />
         <Navbar theme={theme} />

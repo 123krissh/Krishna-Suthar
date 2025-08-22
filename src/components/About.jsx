@@ -22,6 +22,7 @@ import {
   Github, Linkedin, Mail, ArrowRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { SiPostman } from 'react-icons/si';
 
 const About = ({ theme }) => {
     const socialLinks = [
@@ -65,6 +66,7 @@ const About = ({ theme }) => {
         { name: "Git", icon: <GitBranch className="w-4 h-4 mr-2" /> },
         { name: "Figma", icon: <Figma className="w-4 h-4 mr-2" /> },
         { name: "VS Code", icon: <VscVscode className="w-4 h-4 mr-2" /> },
+        { name: "Postman", icon: <SiPostman className="w-4 h-4 mr-2" /> },
       ],
     },
   ];
@@ -80,9 +82,15 @@ const About = ({ theme }) => {
 
   const experience = [
     {
+      position: "Data Science Intern",
+      company: "Celebal Technologies",
+      period: "Jun 2025 - Aug 2025",
+      description: "Developed and deployed Machine Learning models (regression, clustering) on real-world datasets, focusing on data preprocessing and feature engineering using Python. Strengthened skills in SQL and object-oriented programming (OOPs). I also Gained hands-on experience in Generative AI, working with LLMs, prompt engineering, LangChain, and Retrieval-Augmented Generation (RAG) to build intelligent applications.",
+    },
+    {
       position: "React-JS Developer Intern",
       company: "AdsEra IT Services Pvt. Ltd.",
-      period: "07/2024 - 08/2024",
+      period: "July 2024 - Aug 2024",
       description: "Developed a responsive frontend using scalable React.js components, optimizing UI performance and user experience. Gained valuable experience in web development and internal efficiency optimization.",
     },
   ];

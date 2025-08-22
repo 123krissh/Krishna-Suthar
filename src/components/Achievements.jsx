@@ -14,6 +14,7 @@ import iitk from '../assets/IIT KANPUR.png';
 import udemy from '../assets/UDEMY.png';
 import fk from '../assets/Flipkart grid 5.0.png';
 import da from '../assets/DUCAT.jpg';
+import CDAC from '../assets/CDAC.png';
 
 const Achievements = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -27,6 +28,16 @@ const Achievements = () => {
   ];
 
   const achievements = [
+    {
+      title: "Bootcamp on Big Data & Data Science",
+      issuer: "C-DAC, noida",
+      // description: "Professional certification validating skills in building and training neural networks using TensorFlow.",
+      date: "April 2025",
+      image: CDAC,
+      technologies: ["Big Data", "Apache hadoop", "MapReduce", "Data Science", "ML"],
+      category: "course",
+      credentialLink: "",
+    },
     {
       title: "ICDAM: Research Paper Cyberbullying Analysis",
       issuer: "ICDAM 2024",
@@ -182,13 +193,12 @@ const Achievements = () => {
               className="shadow-blue-400 backdrop-blur-sm rounded-lg shadow-md hover:shadow-xl transition-shadow flex flex-col overflow-hidden"
               whileHover={{ scale: 1.01 }}
             >
-              {/* Replace with your actual image */}
-              <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
+              <div className="relative h-75 w-full rounded-t-lg overflow-hidden">
   {achievement.image ? (
     <img
       src={achievement.image}
       alt={`${achievement.title} certificate`}
-      className="absolute inset-0 w-full h-full object-cover"
+      className="absolute inset-0 w-full h-full"
     />
   ) : (
     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
+// import ScrollToTop from './ScrollToTop';
 
 const Footer = ({ theme }) => {
   const socialLinks = [
@@ -40,6 +41,8 @@ const Footer = ({ theme }) => {
       whileInView="visible"
       viewport={{ once: true }}
     >
+      {/* <div className="justify-end"><ScrollToTop /></div> */}
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center">
           <motion.div 
