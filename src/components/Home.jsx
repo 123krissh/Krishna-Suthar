@@ -195,7 +195,7 @@ const Home = () => {
             {socialLinks.map((social, index) => (
               <motion.a
                 key={index}
-                href={social.link}
+                href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-all duration-300 text-xl p-2 rounded-lg hover:bg-blue-400/5 border border-transparent hover:border-blue-400/20"
@@ -524,23 +524,8 @@ const Home = () => {
       Connect Me
       <ArrowRight size={16} className="ml-2" />
     </Link>
- 
-</motion.div>
-
-      </motion.section>
-
-      {/* Back to top button */}
-      <motion.button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:text-gray-800 shadow-lg hover:bg-blue-600 transition-all"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: window.scrollY > 300 ? 1 : 0 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.button>
+    </motion.div>
+    </motion.section>
     </div>
   );
 };

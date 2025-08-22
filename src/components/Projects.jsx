@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight, Link as LinkIcon } from 'lucide-react';
 import EC from '../assets/EC.jpg';
-import app from '../assets/app.png';
+import app from '../assets/app1.png';
 import powerBi from '../assets/powerBi.png';
 import ca from '../assets/ca.jpg';
 import bt from '../assets/bt.jpeg';
@@ -10,6 +10,7 @@ import cr from '../assets/cr.jpg';
 import sd from '../assets/sd.webp';
 import ai from '../assets/ai.webp';
 import portfolio from '../assets/portfolio.png';
+import rag from '../assets/RAG.png';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -25,6 +26,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "RAG Chatbot App",
+      description: "This is a Streamlit-based RAG (Retrieval-Augmented Generation) application that allows users to upload documents (.pdf, .docx, .txt) and interact with them through a chatbot",
+      image: rag,
+      technologies: ["AI", "Python", "Gemini", "RAG", "LLm", "LangChain", "Qdrant"],
+      category: "ai",
+      demoLink: "https://123krissh-csi-assignments-assignmentweek8app-8yehmx.streamlit.app/",
+      githubLink: "https://github.com/123krissh/CSI-Assignments/tree/main/AssignmentWeek8"
+    },
+    {
       title: "GiftHub E-commerce Platform",
       description: "Full-stack E-Commerce MERN app with JWT auth, Redux, Razorpay, and Admin Dashboard with inventory tracking and user analytics.",
       image: EC,
@@ -39,7 +49,6 @@ const Projects = () => {
       image: ai,
       technologies: ["AI", "Python", "Gemini", "Tavily", "LangChain", "LangGraph"],
       category: "ai",
-      demoLink: "https://github.com/123krissh/Deep-Research-AI-Agentic-System",
       githubLink: "https://github.com/123krissh/Deep-Research-AI-Agentic-System"
     },
     {
@@ -48,17 +57,14 @@ const Projects = () => {
       image: app,
       technologies: ["Flutter", "Django"],
       category: "app",
-      demoLink: "https://github.com/123krissh/student-info-management",
       githubLink: "https://github.com/123krissh/student-info-management"
     },
     {
       title: "HR Analytics Dashboard",
       description: "Interactive dashboard built using Power BI with advanced filtering and drill-down charts.",
       image: powerBi,
-      technologies: ["Power BI"],
+      technologies: ["Power BI", "Data Analytics", "Data visualization"],
       category: "ml",
-      demoLink: "https://github.com/123krissh",
-      githubLink: "https://github.com/123krissh"
     },
     {
       title: "Portfolio Website",
@@ -66,8 +72,8 @@ const Projects = () => {
       image: portfolio,
       technologies: ["React", "Three.js", "Tailwind CSS", "Framer Motion"],
       category: "web",
-      demoLink: "https://example.com",
-      githubLink: "https://github.com"
+      demoLink: "https://krishna-suthar.vercel.app/",
+      githubLink: "https://github.com/123krissh/Krishna-Suthar"
     },
     {
       title: "Cyberbullying Analysis",
@@ -75,16 +81,14 @@ const Projects = () => {
       image: ca,
       technologies: ["Machine Learning", "NLP", "Python", "Pandas"],
       category: "ml",
-      demoLink: "https://scholar.google.com/citations?user=Cf_C804AAAAJ",
       githubLink: "https://github.com/123krissh/Cyberbullying_Analysis"
     },
     {
       title: "Brain Tumor Detection",
-      description: "Conducted a comparative analysis of YOLOv3, YOLOv5, YOLOv8, YOLOv9, YOLOv10, and YOLOv11 object detection models on brain MRI datasets for tumor detection.",
+      description: "Conducted a comparative analysis of YOLOv3, YOLOv5, YOLOv8, YOLOv9, YOLOv10, YOLOv11, and CNN object detection models on brain MRI datasets for tumor detection.",
       image: bt,
-      technologies: ["YOLO", "Python", "TensorFlow", "PyTorch"],
+      technologies: ["YOLO", "CNN", "Python", "TensorFlow", "PyTorch"],
       category: "dl",
-      demoLink: "https://github.com/123krissh/Brain-Tumor-Detection",
       githubLink: "https://github.com/123krissh/Brain-Tumor-Detection"
     },
     {
@@ -93,7 +97,6 @@ const Projects = () => {
       image: sd,
       technologies: ["YOLOv8", "Flask", "TensorFlow", "PyTorch", "OpenCV"],
       category: "dl",
-      demoLink: "https://github.com/123krissh/Surveillance-Detection-System",
       githubLink: "https://github.com/123krissh/Surveillance-Detection-System"
     },
     {
@@ -102,7 +105,6 @@ const Projects = () => {
       image: cr,
       technologies: ["Machine Learning", "Logistic Regression", "Random Forest", "Dicision Tree", "Python, Flask", "HTML", "CSS"],
       category: "ml",
-      demoLink: "https://github.com/123krissh/Crop_Recommendation_System",
       githubLink: "https://github.com/123krissh/Crop_Recommendation_System"
     }
   ];
@@ -163,7 +165,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-50 object-cover"
+                className="w-full h-55"
               />
               <div className="p-4 flex flex-col flex-grow">
                 <h3 className="text-lg font-bold dark:text-white">{project.title}</h3>
@@ -179,6 +181,7 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex items-center justify-between mt-4">
+                  {project.demoLink && (
                   <a
                     href={project.demoLink}
                     target="_blank"
@@ -188,6 +191,8 @@ const Projects = () => {
                     <LinkIcon size={14} className="mr-1" />
                     View
                   </a>
+                  )}
+                   {project.githubLink && (
                   <a
                     href={project.githubLink}
                     target="_blank"
@@ -197,6 +202,7 @@ const Projects = () => {
                     <Github size={14} className="mr-1" />
                     GitHub
                   </a>
+                   )}
                 </div>
               </div>
             </motion.div>

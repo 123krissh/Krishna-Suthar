@@ -262,7 +262,7 @@ const Achievements = () => {
           href="https://www.linkedin.com/in/krishana-suthar"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-75 px-4 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-bold transition-all duration-150 hover:text-gray-800 hover:shadow-lg"
+          className="w-90 px-4 py-2 flex justify-center items-center mx-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-bold transition-all duration-150 hover:text-gray-800 hover:shadow-lg"
         >
           View more Achievements on LinkedIn
           <ArrowRight size={26} className="ml-2 font-bold" />

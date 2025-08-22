@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Loader from './components/Loader';
 import ParticlesBackground from './components/ParticlesBackground';
 import './index.css';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -44,6 +45,8 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop/>
+      <BackToTop /> 
       <div className="min-h-screen flex flex-col relative bg-white dark:bg-gray-900 transition-colors duration-300">
         <ParticlesBackground theme={theme} />
         <Navbar theme={theme} />
