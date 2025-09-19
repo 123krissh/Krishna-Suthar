@@ -76,7 +76,7 @@ const About = ({ theme }) => {
       degree: "B.Tech in Artificial Intelligence and Data Science",
       institution: "Vivekananda Institute of Professional Studies | GGSIPU",
       period: "2022 - 2026",
-      GPA: "8.43/10",
+      GPA: "8.47/10",
     },
   ];
 
